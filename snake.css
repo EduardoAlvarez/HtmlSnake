@@ -1,0 +1,95 @@
+.snake {
+	//background-image:url("img/body.jpg");
+	background-image:url("img/body_green.jpg");
+	background-position: center;
+	background-size: 32px;
+	position:absolute;
+	height:10px;
+	top:0;
+	left:0;
+	width:10px;
+	z-index: 3;
+}
+.snake[id='1'] {
+	background-image:url("img/head_green.jpg");
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.food {
+	z-index: 2;
+	position: absolute;
+	background: linear-gradient(to bottom, white, #E0E0E0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+	height: 10px;
+	width: 10px;
+	top: 20px;
+	height: 10px;
+}
+.pane {
+	position:relative;
+	width:200;
+	height:200;
+	background:rgb(166, 197, 0);
+	//background: linear-gradient(to bottom, #C3DE00, #86AA00);
+
+  border: 10px solid transparent;
+  -webkit-border-image: url("img/border.png") 30 round; /* Safari 3.1-5 */
+  -o-border-image: url("img/border.png") 30 round; /* Opera 11-12.1 */
+  border-image: url("img/border.png") 30 round;
+
+}
+.gameover {
+  font-family: arial;
+  top: 35%;
+  left: 25%;
+  position: absolute;
+	z-index: 4;
+}
+.grass {
+	background-image: url(img/grass.png);
+	position: absolute;
+	height: 15px;
+	top: 10;
+	left: 60px;
+	width: 20px;
+	z-index: 1;
+}
+.score {
+	background: gray;
+	color:white;
+	cursor: default;
+	width: 200px;
+	height: 15px;
+	padding: 10px;
+	font-size: 12px;
+}
+.score-right {
+	float:right;
+}
+.score-left {
+	float:left;
+}
+
+.no-selection {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.snake.left{
+	transform: rotate(-180deg);
+}
+.snake.right{
+	transform: rotate(0deg);
+}
+.snake.up{
+	transform: rotate(-90deg);
+}
+.snake.down{
+	transform: rotate(90deg);
+}
